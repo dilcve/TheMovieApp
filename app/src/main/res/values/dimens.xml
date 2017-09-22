@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="padding_micro">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_normal">14dp</dimen>
+    <dimen name="padding_large">18dp</dimen>
+
+    <dimen name="text_size_primary">20sp</dimen>
+    <dimen name="text_size_secondary">15sp</dimen>
+    <dimen name="text_size_micro">13sp</dimen>
+
+</resources>

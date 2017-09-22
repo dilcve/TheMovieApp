@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_marginBottom="@dimen/padding_micro"
+    android:elevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_movie_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="#ccc"
+            android:transitionName="@string/transition_img"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:selectableItemBackground">
+
+            <LinearLayout
+                android:id="@+id/comp_event_item_layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_gradient"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/item_movie_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_primary"
+                    android:textStyle="bold"
+                    tools:text="Minions" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/item_movie_release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="@dimen/padding_normal"
+                        android:background="@drawable/shape_square_grey"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/padding_micro"
+                        android:paddingRight="@dimen/padding_micro"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_secondary"
+                        android:textStyle="bold"
+                        tools:text="Released: 12/12/2016" />
+
+                    <TextView
+                        android:id="@+id/item_movie_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:drawableStart="@android:drawable/star_on"
+                        android:gravity="center_vertical"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_size_secondary"
+                        android:textStyle="bold"
+                        tools:drawableTint="#f1e048"
+                        tools:text="-" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_movie_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="5"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size_micro"
+                    tools:text="Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world." />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

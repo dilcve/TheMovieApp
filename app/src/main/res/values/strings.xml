@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">The movie app</string>
+
+    <string name="lbl_loading">Loading…</string>
+    <string name="lbl_no_data_available">There is no data to show\n Tap to retry!</string>
+    <string name="lbl_load_more_error">Something went wrong to get more users, please try again.</string>
+    <string name="lbl_load_full_details">Error on fetch all details data</string>
+    <string name="lbl_release_date">Release: %1$s</string>
+    <string name="lbl_production_companies">Production Companies:</string>
+    <string name="lbl_genres">Genres:</string>
+
+    <string name="transition_img">transition_img</string>
+</resources>
