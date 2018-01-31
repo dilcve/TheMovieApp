@@ -2,25 +2,27 @@ package br.com.rf.themovieapp.data.source;
 
 import android.content.Context;
 
+import br.com.rf.themovieapp.data.source.local.LocalDataSource;
 import br.com.rf.themovieapp.data.source.local.MoviesLocalDataSource;
 import br.com.rf.themovieapp.data.source.remote.MoviesRemoteDataSource;
+import br.com.rf.themovieapp.data.source.remote.RemoteDataSource;
 import br.com.rf.themovieapp.model.MovieDetails;
 import br.com.rf.themovieapp.model.MoviesWrapper;
 
-public class MoviesRepository implements MoviesDataSource.RemoteDataSource, MoviesDataSource.LocalDataSource {
+public class MoviesRepository implements MoviesDataSource {
 
     private static MoviesRepository INSTANCE = null;
 
-    private final MoviesDataSource.RemoteDataSource mMoviesRemoteDataSource;
-    private final MoviesDataSource.LocalDataSource mMoviesLocalDataSource;
+    private final RemoteDataSource mMoviesRemoteDataSource;
+    private final LocalDataSource mMoviesLocalDataSource;
 
     // Prevent direct instantiation.
-    private MoviesRepository(MoviesDataSource.RemoteDataSource moviesRemoteDataSource, MoviesDataSource.LocalDataSource moviesLocalDataSource) {
+    private MoviesRepository(RemoteDataSource moviesRemoteDataSource, LocalDataSource moviesLocalDataSource) {
         mMoviesRemoteDataSource = moviesRemoteDataSource;
         mMoviesLocalDataSource = moviesLocalDataSource;
     }
 
-    public static MoviesRepository getInstance(MoviesDataSource.RemoteDataSource moviesRemoteDataSource, MoviesDataSource.LocalDataSource moviesLocalDataSource) {
+    public static MoviesRepository getInstance(RemoteDataSource moviesRemoteDataSource, LocalDataSource moviesLocalDataSource) {
         if (INSTANCE == null) {
             INSTANCE = new MoviesRepository(moviesRemoteDataSource, moviesLocalDataSource);
         }

@@ -3,18 +3,17 @@ package br.com.rf.themovieapp.movies;
 import android.view.View;
 
 import br.com.rf.themovieapp.data.source.MoviesDataSource;
-import br.com.rf.themovieapp.data.source.MoviesRepository;
 import br.com.rf.themovieapp.model.Movie;
 import br.com.rf.themovieapp.model.MoviesWrapper;
 
 
 public class MoviesPresenter implements MoviesContract.Presenter {
 
-    private final MoviesRepository mMoviesRepository;
+    private final MoviesDataSource mMoviesRepository;
 
     private final MoviesContract.View mMoviesView;
 
-    public MoviesPresenter(MoviesRepository moviesRepository, MoviesContract.View moviesView) {
+    public MoviesPresenter(MoviesDataSource moviesRepository, MoviesContract.View moviesView) {
         mMoviesRepository = moviesRepository;
         mMoviesView = moviesView;
         mMoviesView.setPresenter(this);

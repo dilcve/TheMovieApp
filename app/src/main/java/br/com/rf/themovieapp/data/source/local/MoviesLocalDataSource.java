@@ -12,7 +12,7 @@ import br.com.rf.themovieapp.model.MovieDetails;
 import br.com.rf.themovieapp.model.MoviesWrapper;
 
 
-public class MoviesLocalDataSource implements MoviesDataSource.LocalDataSource {
+public class MoviesLocalDataSource implements LocalDataSource {
 
     private static MoviesLocalDataSource INSTANCE;
 

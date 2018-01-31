@@ -1,7 +1,6 @@
 package br.com.rf.themovieapp.moviedetails;
 
 import br.com.rf.themovieapp.data.source.MoviesDataSource;
-import br.com.rf.themovieapp.data.source.MoviesRepository;
 import br.com.rf.themovieapp.model.Movie;
 import br.com.rf.themovieapp.model.MovieDetails;
 
@@ -9,11 +8,11 @@ import br.com.rf.themovieapp.model.MovieDetails;
 public class MovieDetailsPresenter implements MovieDetailsContract.Presenter {
 
     private final MovieDetailsContract.View mMovieDetailsView;
-    private final MoviesRepository mMoviesRepository;
+    private final MoviesDataSource mMoviesRepository;
 
     private Movie mMovie;
 
-    public MovieDetailsPresenter(Movie movie, MovieDetailsContract.View movieDetailsView, MoviesRepository moviesRepository) {
+    public MovieDetailsPresenter(Movie movie, MovieDetailsContract.View movieDetailsView, MoviesDataSource moviesRepository) {
         mMoviesRepository = moviesRepository;
         mMovieDetailsView = movieDetailsView;
         mMovieDetailsView.setPresenter(this);
